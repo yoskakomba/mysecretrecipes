@@ -7,34 +7,12 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <header class="navbar navbar-default navbar-static-top">
-    <div class="container">
-      <%= link_to "My Secret Recipes", "", class: "btn btn-lg btn-success", id: "logo" %>
-      <div class="nav-item">
-        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
-         
-      </div>
-      
-      <div class="nav-item">
-        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
-         
-      </div>
-      
-      <div class="nav-item">
-        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
-         
-      </div>
-      
-    </div>
-    
-  </header>
+  
+  <%= render 'layouts/navigation' %>
+  
   <div class="container">
     
-    <div class="footer">
-      <%= yield %>
-      <p>&copy; My Secret Recipes - Yosafat Ariel 2015</p>
-      
-    </div>
+    <%= render 'layouts/footer' %>
   
   </div>
 
