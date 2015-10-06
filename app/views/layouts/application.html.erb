@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Secret Recipes</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+  <header class="navbar navbar-default navbar-static-top">
+    <div class="container">
+      <%= link_to "My Secret Recipes", "", class: "btn btn-lg btn-success", id: "logo" %>
+      <div class="nav-item">
+        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
+         
+      </div>
+      
+      <div class="nav-item">
+        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
+         
+      </div>
+      
+      <div class="nav-item">
+        <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
+         
+      </div>
+      
+    </div>
+    
+  </header>
+  <div class="container">
+    
+    <div class="footer">
+      <%= yield %>
+      <p>&copy; My Secret Recipes - Yosafat Ariel 2015</p>
+      
+    </div>
+  
+  </div>
+
+
+</body>
+</html>
