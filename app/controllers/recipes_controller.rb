@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
     
     def index
-        @recipes = Recipe.all
+        @recipes = Recipe.all.sort_by{|likes| likes.thumbs_up_total}.reverse #this code is to make ASCENDING PAGE based on popularity
     end
     
     def show
@@ -42,9 +42,14 @@ class RecipesController < ApplicationController
     
     def like
         @recipe = Recipe.find(params[:id])
-        Like.create(like: params[:like], chef: Chef.first, recipe: @recipe)
-        flash[:success] = "Your selection was successful"
-        redirect_to :back
+        like = Like.create(like: params[:like], chef: Chef.first, recipe: @recipe)
+        if like.valid?
+            flash[:success] = "Your selection was successful"
+            redirect_to :back
+        else
+            flash[:danger] = "You can only like/dislike a recipe one" 
+            redirect_to :back
+        end
     end
     
     private
