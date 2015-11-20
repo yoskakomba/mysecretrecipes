@@ -1,7 +1,7 @@
 class RecipesController < ApplicationController
     
     def index
-        @recipes = Recipe.all.sort_by{|likes| likes.thumbs_up_total}.reverse #this code is to make ASCENDING PAGE based on popularity
+        @recipes = Recipe.paginate(page: params[:page], per_page: 4) 
     end
     
     def show
