@@ -5,7 +5,7 @@
         <%= will_paginate %>
         
     </div>                          
-</div>
+</div><!-- PAGINATE ROW -->
 
 <% @chefs.each do |chef| %>
     <div class="row">
@@ -13,10 +13,9 @@
             <%= link_to gravatar_for(chef, size: 200), chef_path(chef) %>
             <p>
                 <h5>Chef name: <%= chef.chefname %></h5>
-                
             </p>
             
         </div>                          
-    </div>
+    </div><!-- GRAVATAR ROW -->
 
 <% end %>
