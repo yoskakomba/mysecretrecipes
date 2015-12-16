@@ -1,6 +1,6 @@
   <header class="navbar navbar-default navbar-fixed-top">
       <div class="container">
-        <%= link_to "My Secret Recipes", root_path, class: "btn btn-lg btn-success", id: "logo" %>
+        <%= link_to "Asian Recipes", root_path, class: "btn btn-lg btn-success", id: "logo" %>
         <div class="nav-item">
           <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
            
@@ -10,11 +10,21 @@
           <%= link_to "link 1", "", class: "btn btn-default btn-warning" %>
            
         </div>
-        
-        <div class="nav-item">
-          <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-warning" %>
-           
-        </div>
+        <% if logged_in? %>
+          
+          <div class="nav-item">
+            <%= link_to "New Recipe", new_recipe_path, class: "btn btn-default btn-warning" %> 
+          </div>
+          
+           <div class="nav-item">
+            <%= link_to "Logout", logout_path, class: "btn btn-default btn-danger" %> 
+          </div>
+          
+        <% else %>
+          <div class="nav-item">
+            <%= link_to "Log in", login_path, class: "btn btn-default btn-warning" %> 
+          </div>
+        <% end %>
         
       </div>
       

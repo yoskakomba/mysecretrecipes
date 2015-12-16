@@ -13,6 +13,7 @@ class ChefsController < ApplicationController
         @chef = Chef.new(chef_params)
         if @chef.save
             flash[:success] = "Your account has been created succesfully"
+            session[:chef_id] = @chef.id
             redirect_to recipes_path 
         else
             render 'new'
@@ -28,6 +29,7 @@ class ChefsController < ApplicationController
         @chef = Chef.find(params[:id])
         if @chef.update(chef_params)
             flash[:success] = "Your profile has been updated succesfully!"
+            session[:chef_id] = @chef.id
             redirect_to recipes_path #TODO change to show chef page
         else
            render 'edit' 
