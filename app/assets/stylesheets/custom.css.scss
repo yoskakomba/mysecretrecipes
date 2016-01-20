@@ -35,6 +35,19 @@ body {
     float: left;
     margin-top: 20px;
     
+    
+}
+
+li {
+    list-style-type: none;
+    
+}
+
+.nav_ul_item {
+    padding-left: 25px;
+    float: left;
+    margin-top: 20px;
+    
 }
 
 .center {
@@ -114,4 +127,13 @@ span.picture {
 .show_recipe {
     margin: 10px 10px 10px 10px;
     
+}
+
+.checkbox-inline.no_indent,
+.checkbox-inline.no_indent+.checkbox-inline.no_indent {
+  margin-left: 0;
+  margin-right: 10px;
+}
+.checkbox-inline.no_indent:last-child {
+  margin-right: 0;
 }
