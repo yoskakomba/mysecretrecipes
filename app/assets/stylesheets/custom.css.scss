@@ -112,6 +112,11 @@ input, textarea, select, .uneditable-input {
     margin-bottom: 15px;
 }
 
+.input_checkbox input{
+    width: auto !important;
+    
+    
+}
 input {
     heigh: auto !important;
 }
@@ -129,11 +134,3 @@ span.picture {
     
 }
 
-.checkbox-inline.no_indent,
-.checkbox-inline.no_indent+.checkbox-inline.no_indent {
-  margin-left: 0;
-  margin-right: 10px;
-}
-.checkbox-inline.no_indent:last-child {
-  margin-right: 0;
-}

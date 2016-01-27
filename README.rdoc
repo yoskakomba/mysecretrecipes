@@ -14,3 +14,5 @@ What we need to do:
 -Restrict actions like create recipe, edit recipe and like feature to logged in chefs only
 -Restricting edit of recipes by chefs who created the recipes
 
+LECTURE 71 
+- ADD ADMIN FUNCTIONALITY
